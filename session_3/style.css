@@ -1,0 +1,41 @@
+p {
+    color: blueviolet;
+}   
+.p-blue {
+    color: blue;
+}
+
+.bg-green {
+    background-color: green;
+}
+#p-yellow
+{
+    color: yellow;
+}
+
+
+
+.display-inline-block{
+    /* display:inline-block; */
+    float:left;
+    width: 20%;
+    height: 100px;
+}
+.div_1 {
+    background-color: red;
+}
+.div_2 {
+    background-color: green;
+}
+.div_3 {
+    background-color: yellow;
+}
+.div_4 {
+    background-color: purple;
+}
+.perant {
+    background-color: rgba(153, 177, 178, 0.223);
+}
+.clear-fix{
+    clear:left;
+}

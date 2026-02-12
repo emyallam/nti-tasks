@@ -1,0 +1,25 @@
+i{
+    color: red;
+}
+span{
+    margin: 3px;
+}
+.card-title{
+    color: green;
+}
+.discount{
+    width: fit-content;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color:green;
+}
+.link-button{
+    border:0;
+    border-radius:5px;
+}
+.link-button:hover{
+    background-color: green;
+   a{color: white;} 
+}

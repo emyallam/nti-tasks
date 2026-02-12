@@ -1,0 +1,365 @@
+:root {
+  --mainColor: #006937;
+  --secColor: #dd3842;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #cdd9ce90,
+    #21722987
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 5000px;
+}
+a {
+  text-decoration: none;
+  transition: all 0.5s;
+}
+i {
+  transition: all 0.5s;
+}
+
+
+.section1{
+  height: 500px;
+}
+.it1{
+    background-image: url(../imgs/imgi_142_hero-Banner.png);
+  background-size:cover ;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  
+}
+.it2{
+    background-image: url(../imgs/imgi_150_hero-Banner-1.2.png);
+  background-size:cover ;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  
+}
+.it3{
+    background-image: url(../imgs/imgi_160_hero-Banner-1.3.png);
+  background-size:cover ;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  
+}
+
+
+
+.carousel-inner{
+
+
+    border-radius: 8px;
+    height: 100%;
+    justify-content: center;
+   
+    
+   
+}
+.carousel-item{
+  height: 400px !important;
+  padding:70px 0 !important;
+  
+      
+    }
+.carousel-item{
+
+    align-items: center;
+   
+}
+.shop-link{
+  width: fit-content;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
+.up-content{
+background-image: url(../imgs/imgi_16_hero-Banner-2.png);
+/* box-sizing: border-box; */
+background-size:cover ;
+  display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+  width: 85%;
+    height: 200px;
+        padding: 50px 0;
+        margin-top:45px!important;
+    justify-content: center;
+}
+.down-content{
+  background-image: url(../imgs/imgi_17_hero-Banner-3.png);
+  width: 85%;
+  background-size:cover ;
+  display: flex;
+    flex-direction: column;
+  border-radius: 8px;
+    height: 200px;
+    justify-content: center;
+        padding: 50px 0;
+
+}
+
+
+
+
+
+.ul-bar{
+  display: flex;
+ 
+}
+.li-bar{
+  margin: 0 15px;
+  
+}
+
+.special-offer{
+   background-image: url(../imgs/imgi_411_Banner.png);
+    background-size: cover;
+    background-position: center;
+    margin: 0 20px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+  }
+
+
+
+
+
+
+.card {
+  padding: 10px;
+  position: relative;
+}
+.card .card-img {
+  padding: 15px;
+}
+.card .card-img img {
+  width: 100%;
+  transition: all 5s;
+}
+.card .card-img img:hover {
+  content: url(../imgs/imgi_37_pro02.png);
+}
+.card .card-info {
+  margin-top: 10px;
+}
+.card .card-info .card-title {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--mainColor);
+}
+.card .card-info p {
+  color: #92949f;
+  margin: 5px 0;
+}
+.card .card-info .card-rate {
+}
+.card .card-info .card-rate i {
+  font-size: 14px;
+  color: var(--secColor);
+}
+.card .card-info .card-rate span {
+  margin-left: 10px;
+}
+.card .card-info .card-discount {
+  margin: 5px 0;
+}
+.card .card-info .card-discount span:nth-child(1) {
+  color: #92949f;
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+.card .card-info .card-discount span:nth-child(2) {
+}
+.card .card-info button {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  color: var(--mainColor);
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--mainColor);
+  transition: all 0.5s;
+}
+.card .card-info button:hover {
+  background-color: var(--mainColor);
+  color: white;
+}
+.card .card-dis {
+  position: absolute;
+  background-color: var(--secColor);
+  padding: 5px 10px;
+  color: white;
+}
+.card .card-controls {
+  position: absolute;
+  right: 0;
+  padding: 5px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.card .card-controls .card-control-wish,
+.card .card-controls .card-control-view {
+  padding: 5px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 4px 0;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.card .card-controls .card-control-wish {
+  margin-top: 0;
+}
+
+.card .card-controls div:hover i {
+  color: var(--mainColor);
+  cursor: pointer;
+}
+.card:hover .card-controls {
+  opacity: 1;
+}
+.owl-carousel{
+    position: relative;
+}
+
+.owl-nav .owl-prev ,.owl-nav .owl-next{
+  position: absolute;
+  background: var(--mainColor) !important;
+  font-size: 35px !important;
+  color: white !important;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.owl-nav .owl-prev{
+    left: -10px !important;
+}
+.owl-nav .owl-next{
+    right: -10px !important;
+}
+.owl-nav .owl-prev span,
+.owl-nav .owl-next span{
+        top: -3px;
+    position: relative;
+}
+
+
+
+
+/*  start offer */
+.offer{
+  background-image: url(../imgs/imgi_412_sale-banner.png);
+  justify-content: space-evenly;
+  align-items: center;
+}
+/* end offer */
+
+
+
+.bar{
+  height: 50px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+}
+.show-link a{
+  color: black;
+  transition: all 0,5s;
+}
+.show-link a:hover{
+  color:#006937;
+}
+
+
+/* start brand */
+
+.brand{
+  width: 300px;
+  height: 100px;
+  border: solid;
+  border-radius: 8px;
+  padding: 25px 30px;
+}
+/* end brand */
+
+
+
+/* start posts */
+.posts{
+  background-color: white;
+  
+}
+.post-info{
+  padding: 8px;
+}
+.p-post{
+  margin: 3px 0;
+  color: #92949f;
+}
+
+/* end posts */
+
+/* start offer2 */
+.offer-link{
+border-radius: 5px;
+transition: all 0.5s;
+} 
+.offer-link:hover{
+  background-color: white; 
+  color: black;
+  
+}
+/* end offer2 */
+
+
+/* startfooter */
+#footer{
+  background-color: white;
+  padding: 5px 0;
+  margin: 50px 0;
+}
+#footer p{
+  color: #b4b5ba !important;
+}
+.icon {
+  /* position: absolute; */
+  /* justify-content: center;
+  align-items: center; */
+  border:solid;
+  border-color: #006937;
+  width: fit-content;
+  padding:3px 6px;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  
+}
+/* end footer */

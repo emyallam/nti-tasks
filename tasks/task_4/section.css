@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+}
+
+.pricing-section {
+  max-width: 900px;
+  margin: 40px auto;
+  background: rgba(255,255,255,0.85);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(60,60,120,0.12);
+  padding: 32px 24px 40px 24px;
+}
+
+.display-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #22223b;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.display-header p {
+  color: #6c6f7a;
+  font-size: 1.1rem;
+  margin-bottom: 2.5em;
+  text-align: center;
+}
+
+.pricing-cards {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  background: #f4f7fa;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(60,60,120,0.08);
+  padding: 32px 28px 28px 28px;
+  min-width: 240px;
+  max-width: 280px;
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.pricing-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(60,60,120,0.16);
+}
+
+.card-header {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.7em;
+  text-align: center;
+}
+
+.card-price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #22223b;
+  margin-bottom: 0.5em;
+}
+.card-price .currency {
+  font-size: 1.2rem;
+  vertical-align: super;
+}
+.card-price .per {
+  font-size: 1rem;
+  color: #6c6f7a;
+  font-weight: 400;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 1.2em 0 1.8em 0;
+  width: 100%;
+}
+.features li {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 0.7em;
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+}
+.features .fa-check {
+  color: #4f8cff;
+  font-size: 1.1em;
+}
+
+.card-btn {
+  width: 100%;
+  padding: 0.8em 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.basic-btn {
+  background: #e0e7ff;
+  color: #2563eb;
+}
+.basic-btn:hover {
+  background: #c7d2fe;
+}
+.standard-btn {
+  background: #2563eb;
+  color: #fff;
+}
+.standard-btn:hover {
+  background: #1d4ed8;
+}
+.premium-btn {
+  background: #a78bfa;
+  color: #fff;
+}
+.premium-btn:hover {
+  background: #7c3aed;
+}
+
+.basic {
+  background: linear-gradient(135deg, #e0e7ff 60%, #f4f7fa 100%);
+}
+.standard {
+  background: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%);
+  color: #fff;
+  z-index: 1;
+  box-shadow: 0 8px 32px rgba(37,99,235,0.18);
+}
+.standard .card-header,
+.standard .features li,
+.standard .card-price {
+  color: #fff;
+}
+.standard .fa-check {
+  color: #fff;
+}
+
+.premium {
+  background: linear-gradient(135deg, #a78bfa 0%, #f4f7fa 100%);
+}
+
+.most-popular {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #2563eb;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 4px 18px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.10);
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+}
