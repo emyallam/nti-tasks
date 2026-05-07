@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Caramel Macarons</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(
+        90deg,
+        #d9c0c7 50%,
+        #7d5b69 50%
+      );
+      overflow:hidden;
+    }
+
+    .container{
+      width:80%;
+      max-width:1100px;
+      height:500px;
+      background:#8f6675;
+      position:relative;
+      border-radius:8px;
+      overflow:hidden;
+      padding:40px;
+      box-shadow:0 20px 50px rgba(0,0,0,0.15);
+    }
+
+    /* LOGO */
+
+    .logo{
+      color:#fff;
+      font-weight:700;
+      line-height:1.1;
+      font-size:26px;
+      letter-spacing:1px;
+    }
+
+    /* NAV */
+
+    .top-bar{
+      position:absolute;
+      top:35px;
+      right:40px;
+      display:flex;
+      align-items:center;
+      gap:15px;
+    }
+
+    .search{
+      width:260px;
+      height:45px;
+      background:#8a6170;
+      border-radius:30px;
+      display:flex;
+      align-items:center;
+      padding:0 20px;
+      color:#fff;
+      opacity:.9;
+    }
+
+    .search input{
+      border:none;
+      outline:none;
+      background:transparent;
+      color:#fff;
+      margin-left:10px;
+      width:100%;
+      font-size:14px;
+    }
+
+    .search input::placeholder{
+      color:#f3e6eb;
+    }
+
+    .menu{
+      width:45px;
+      height:45px;
+      background:#8a6170;
+      border-radius:50%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      cursor:pointer;
+      color:#fff;
+      font-size:20px;
+    }
+
+    /* CENTER CIRCLE */
+
+    .circle{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      width:320px;
+      height:320px;
+      background:rgba(0,0,0,0.08);
+      border-radius:50%;
+    }
+
+    /* TITLES */
+
+    .title-left,
+    .title-right{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      color:#fff;
+      font-size:64px;
+      font-weight:400;
+    }
+
+    .title-left{
+      left:110px;
+    }
+
+    .title-right{
+      right:70px;
+    }
+
+    /* MACARONS */
+
+    .macarons{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      z-index:2;
+    }
+
+    .macaron{
+      width:90px;
+      height:50px;
+      background:linear-gradient(
+        180deg,
+        #f7e1b9,
+        #b07a3d
+      );
+      border-radius:50px;
+      transform:rotate(-12deg);
+      box-shadow:0 10px 20px rgba(0,0,0,0.2);
+      animation:float 3s ease-in-out infinite;
+    }
+
+    .macaron:nth-child(even){
+      transform:rotate(12deg);
+    }
+
+    .macaron::before{
+      content:'';
+      position:absolute;
+      top:20px;
+      left:0;
+      width:100%;
+      height:10px;
+      background:#fff3dd;
+    }
+
+    @keyframes float{
+      0%,100%{
+        transform:translateY(0) rotate(-12deg);
+      }
+      50%{
+        transform:translateY(-10px) rotate(-12deg);
+      }
+    }
+
+    /* BOTTOM */
+
+    .bottom-left{
+      position:absolute;
+      bottom:30px;
+      left:40px;
+      display:flex;
+      align-items:center;
+      gap:15px;
+      color:#fff;
+    }
+
+    .arrow{
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      background:#8a6170;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      cursor:pointer;
+    }
+
+    .counter{
+      width:50px;
+      height:35px;
+      border-radius:20px;
+      background:#9a7381;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:14px;
+    }
+
+    /* CARD */
+
+    .card{
+      position:absolute;
+      right:40px;
+      bottom:40px;
+      width:230px;
+      height:110px;
+      background:#8a6170;
+      border-radius:20px;
+      padding:20px;
+      color:#fff;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:10px;
+    }
+
+    .card h3{
+      font-size:22px;
+    }
+
+    .watch{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      color:#e7d9df;
+      font-size:14px;
+    }
+
+    .play{
+      width:35px;
+      height:35px;
+      border-radius:50%;
+      background:#fff;
+      color:#7d5b69;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-weight:bold;
+      cursor:pointer;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px){
+
+      .container{
+        height:auto;
+        padding:30px;
+      }
+
+      .title-left,
+      .title-right{
+        position:relative;
+        top:auto;
+        left:auto;
+        right:auto;
+        transform:none;
+        text-align:center;
+        font-size:42px;
+      }
+
+      .titles{
+        margin-top:120px;
+      }
+
+      .circle{
+        width:250px;
+        height:250px;
+      }
+
+      .card{
+        position:relative;
+        right:auto;
+        bottom:auto;
+        margin:40px auto 0;
+      }
+
+      .bottom-left{
+        bottom:20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Logo -->
+    <div class="logo">
+      COO<br>
+      CKERY.
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+
+      <div class="search">
+        🔍
+        <input type="text" placeholder="what will you cook ?">
+      </div>
+
+      <div class="menu">☰</div>
+
+    </div>
+
+    <!-- Background Circle -->
+    <div class="circle"></div>
+
+    <!-- Titles -->
+    <h1 class="title-left">Caramel</h1>
+    <h1 class="title-right">Macarons</h1>
+
+    <!-- Macarons -->
+    <div class="macarons">
+      <div class="macaron"></div>
+      <div class="macaron"></div>
+      <div class="macaron"></div>
+      <div class="macaron"></div>
+      <div class="macaron"></div>
+    </div>
+
+    <!-- Bottom Controls -->
+    <div class="bottom-left">
+
+      <div class="arrow"><</div>
+      <div class="arrow">></div>
+
+      <div class="counter">02</div>
+
+    </div>
+
+    <!-- Card -->
+    <div class="card">
+
+      <h3>Caramel Macarons</h3>
+
+      <div class="watch">
+        <span>watch how to cook</span>
+
+        <div class="play">></div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    // Simple JS Interaction
+
+    const arrows = document.querySelectorAll('.arrow');
+
+    arrows.forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        alert('Slider Action');
+      });
+    });
+
+    document.querySelector('.play').addEventListener('click',()=>{
+      alert('Play Video');
+    });
+  </script>
+
+</body>
+</html>
